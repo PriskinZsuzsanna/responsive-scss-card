@@ -1,0 +1,16 @@
+@mixin mediaq ($breakpoint) {
+
+
+    @if $breakpoint == landscape {
+        @media (min-width: 728px){
+            @content
+        }
+    };
+
+    @if $breakpoint == desktop  {
+        @media (min-width: 928px){
+            @content
+        }
+    };
+
+}

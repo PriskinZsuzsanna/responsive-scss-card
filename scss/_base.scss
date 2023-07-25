@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $very-dark-blue;
+    color: $white;
+    font-size: 1rem;
+    font-family: $font-Inter;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    @include flex-center;
+}
+
+.card {
+    width: min(92%, 1050px);
+    margin-inline: auto;
+    margin-block: 1.5rem;
+    background-color: $dark-desaturated-blue;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    @include mediaq (landscape){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.img-container {
+    order: 2;
+    position: relative;
+}
+
+.img-container::after {
+    @include pseudo;
+    background: $soft-violet;
+    opacity: .8;
+    z-index: 2;
+}
+
+article {
+    text-align: center;
+    padding: 0;
+
+    .text-container {
+        padding: 2rem;
+        height: 100%;
+        @include flex-center;
+        flex-direction: column;
+
+        @include mediaq (landscape) {
+            padding: 1rem;
+            text-align: left;
+        }
+        @include mediaq (desktop) {
+            padding-block: 2rem;
+            padding-inline: 3.5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+
+            @include mediaq (landscape) {
+                font-size: 1.4rem;
+            }
+
+            @include mediaq (desktop) {
+                font-size: 1.8rem;
+            }
+    
+            span {
+                color: $soft-violet;
+            }
+        }
+    
+        p {
+            filter: opacity(.6);
+            font-weight: light;
+            line-height: 1.6;
+            margin-bottom: 1.4rem;
+
+            @include mediaq (landscape) {
+                font-size: .9rem;
+            }
+
+            @include mediaq (desktop) {
+                font-size: 1rem;
+            }
+        }
+    
+        .boxes {
+            @include mediaq (landscape){
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem
+            }
+        }
+    
+        .box {
+            @include flex-column;
+    
+            span {
+                font-size: 1.7rem;
+                font-family: $font-Inter;
+                font-weight: 700;
+
+                @include mediaq (landscape) {
+                    font-size: 1.4rem;
+                }
+
+                @include mediaq (desktop) {
+                    font-size: 1.7rem;
+                }
+            }
+    
+            p {
+                text-transform: uppercase;
+                font-weight: 400;
+
+                @include mediaq (landscape) {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}

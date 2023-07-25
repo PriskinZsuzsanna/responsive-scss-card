@@ -1,0 +1,47 @@
+
+@mixin position ($position, $top, $bottom, $right, $left, $z-index) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    right: $right;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin pseudo () {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+@mixin flex ($justify, $align, $gap, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin flex-column () {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flex-ul-nav {
+    display: flex;
+    gap: 1.2rem
+}
