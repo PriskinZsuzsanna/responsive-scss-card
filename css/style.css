@@ -96,14 +96,9 @@ article .text-container h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 728px) {
+@media (728px <= width <= 928px) {
   article .text-container h1 {
     font-size: 1.4rem;
-  }
-}
-@media (min-width: 928px) {
-  article .text-container h1 {
-    font-size: 1.8rem;
   }
 }
 article .text-container h1 span {
@@ -115,14 +110,9 @@ article .text-container p {
   line-height: 1.6;
   margin-bottom: 1.4rem;
 }
-@media (min-width: 728px) {
+@media (728px <= width <= 928px) {
   article .text-container p {
     font-size: 0.9rem;
-  }
-}
-@media (min-width: 928px) {
-  article .text-container p {
-    font-size: 1rem;
   }
 }
 @media (min-width: 728px) {
@@ -142,21 +132,16 @@ article .text-container .box span {
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
-@media (min-width: 728px) {
+@media (728px <= width <= 928px) {
   article .text-container .box span {
     font-size: 1.4rem;
-  }
-}
-@media (min-width: 928px) {
-  article .text-container .box span {
-    font-size: 1.7rem;
   }
 }
 article .text-container .box p {
   text-transform: uppercase;
   font-weight: 400;
 }
-@media (min-width: 728px) {
+@media (728px <= width <= 928px) {
   article .text-container .box p {
     font-size: 0.9rem;
   }

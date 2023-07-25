@@ -73,12 +73,8 @@ article {
             font-size: 1.8rem;
             margin-bottom: 1rem;
 
-            @include mediaq (landscape) {
+            @include mediaq (smallLandscape) {
                 font-size: 1.4rem;
-            }
-
-            @include mediaq (desktop) {
-                font-size: 1.8rem;
             }
     
             span {
@@ -92,12 +88,8 @@ article {
             line-height: 1.6;
             margin-bottom: 1.4rem;
 
-            @include mediaq (landscape) {
+            @include mediaq (smallLandscape) {
                 font-size: .9rem;
-            }
-
-            @include mediaq (desktop) {
-                font-size: 1rem;
             }
         }
     
@@ -118,12 +110,8 @@ article {
                 font-family: $font-Inter;
                 font-weight: 700;
 
-                @include mediaq (landscape) {
+                @include mediaq (smallLandscape) {
                     font-size: 1.4rem;
-                }
-
-                @include mediaq (desktop) {
-                    font-size: 1.7rem;
                 }
             }
     
@@ -131,7 +119,7 @@ article {
                 text-transform: uppercase;
                 font-weight: 400;
 
-                @include mediaq (landscape) {
+                @include mediaq (smallLandscape) {
                     font-size: .9rem;
                 }
             }
